@@ -47,6 +47,7 @@ void print_lcs(char x[], char y[], int m, int n)
     }
     cout<<"LCS of "<<x<<" "<<y<<" = "<<plcs<<endl;
 }
+
 int main()
 {
     char x[100001], y[100001];
