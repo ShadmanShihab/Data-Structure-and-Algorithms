@@ -18,7 +18,8 @@ int main()
     for(int i=0; i<n; i++)
         for(int j=coin[i], k=0; j<Max; j++, k++)
             dp[j] += dp[k];
-        //dp[j] = dp[j] = dp[j - coin[i]];
+        //dp[j] = dp[j] = dp[j -
+    coin[i]];
 
     while(scanf("%d", &make) == 1)
         printf("%d\n", dp[make]);
