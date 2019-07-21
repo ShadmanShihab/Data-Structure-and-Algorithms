@@ -31,10 +31,11 @@ struct node{
 
 };
 
-struct node* head;
+struct node* head, tail;
 
 void insertAtHead(int x)
 {
+    struct node* tail = new node();
     struct node* newNode = new node();
     newNode->data = x;
     newNode->next = NULL;
@@ -49,6 +50,14 @@ void insertAtHead(int x)
     newNode->next = head;
 
     head = newNode;
+
+    struct node* temp = head;
+    while(temp != NULL)
+    {
+        tail = temp;
+        temp = temp->next;
+    }
+
 }
 
 void print()
@@ -128,6 +137,31 @@ void searchNode(int value)
     cout<<value<<" not found in the linked list"<<endl;
 }
 
+void Sort()
+{
+    struct node* index = new node();
+    struct node* current = new node();
+    struct node* temp = new node();
+
+    temp = head;
+    //dbg(temp->data);
+    while(temp != NULL)
+    {
+        current = temp;
+        index = current;
+
+        while(index != NULL)
+        {
+            if(current->data > index->data)
+                swap(current->data, index->data);
+            index = index->next;
+        }
+        temp = temp->next;
+    }
+    cout<<"\n\nSorted linked list : \n";
+    print();
+}
+
 int main()
 {
     ios_base::sync_with_stdio(false);
@@ -149,5 +183,8 @@ int main()
 
     searchNode(25);
     searchNode(225);
+
+    Sort();
+    //print();
     return 0;
 }
