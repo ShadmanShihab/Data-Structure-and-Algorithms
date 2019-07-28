@@ -36,6 +36,7 @@ void prims(int start)
         pq.pop();
         visited[u] = true;
         cout<<"path -> "<<u<<"  --  Cost -> "<<c<<endl;
+
         if(pq.size() != 0)
             sum += c;
 
@@ -44,9 +45,9 @@ void prims(int start)
             int v = adj[u][i].first;        //in adj
             int w = adj[u][i].second;
 
-            if(!visited[v] && weight[w] > w)
+            if(visited[v]==false && weight[v] > w)
             {
-                weight[w] = w;
+                weight[v] = w;
                 parent[v] = u;
                 pq.push( pii(w, v) );
             }
