@@ -1,5 +1,5 @@
 //dijkstra
-//O(n^2)
+//O(VlogV + E)
 #include <bits/stdc++.h>
 using namespace std;
 #define max 20010
