@@ -1,3 +1,4 @@
+//SPOJ: PRIME1 - Prime Generator
 #include <bits/stdc++.h>
 #include <iostream>
 #define MAX 32000
