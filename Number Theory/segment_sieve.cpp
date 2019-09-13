@@ -9,7 +9,7 @@ using ll = long long;
 
 vector<int> primes;
 
-void sieve()
+void sieve()    
 {
     bool isPrime[MAX];
 
@@ -31,6 +31,34 @@ void sieve()
     }
 }
 
+/*
+
+void sieve()
+{
+    ll n = Max;
+    mark[1] = 1;
+ 
+    for(int i=4; i<=n; i+=2)
+        mark[i] = 1;
+ 
+    int limit = sqrt(n);
+ 
+    for(int i=3; i<=n; i+=2)
+    {
+        if(!mark[i])
+        {
+            for(int j=i*i; j<=n; j+=(2*i))
+                mark[j] = 1;
+        }
+    }
+ 
+    primes.push_back(2);
+    for(int i=3; i<=n; i+=2)
+        if(mark[i] == 0)
+            primes.push_back(i);
+}
+
+*/
 void segmented_sieve(ll l, ll r)
 {
     bool isPrime[r - l + 1];
