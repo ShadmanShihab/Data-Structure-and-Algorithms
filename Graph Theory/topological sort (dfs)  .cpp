@@ -7,7 +7,7 @@ stack<int> Stack;
 
 void topsort(int start)
 {
-    if(visited[start] == false)
+    if(visited[start] == true)
         return;
 
     visited[start] = true;
