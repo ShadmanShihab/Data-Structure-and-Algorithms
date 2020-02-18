@@ -17,7 +17,7 @@ void topsort(int start)
 
     Stack.push(start);
 
-    cout<<Stack.top()<<endl;
+    //cout<<Stack.top()<<endl;
 
 }
 
@@ -38,7 +38,7 @@ int main()
         if(visited[i] == false)
             topsort(i);
     }
-    cout<<Stack.top();
+   // cout<<Stack.top();
 
     while(!Stack.empty() )
     {
