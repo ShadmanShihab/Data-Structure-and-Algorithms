@@ -36,6 +36,12 @@ int n, m;
 vector<edge> e;
 int parent[101];
 
+/*bool cmp(edge e1, edge e2)    // can be used for sorting
+{
+    return e1.w < e2.w;
+}*/
+
+
 void makeset(int n)
 {
     for(int i=1; i<=n; i++)
