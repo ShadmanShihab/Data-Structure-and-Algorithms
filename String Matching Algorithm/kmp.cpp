@@ -44,22 +44,22 @@ bool kmp(string text, string pattern)
 
     while(true)
     {
-        if(j == n)
+        if(i == n)
             return false;
 
-        if(text[j] == pattern[i])
+        if(text[i] == pattern[j])
         {
-            i++;
+            i++;j
             j++;
-            if(i == m)
+            if(j == m)
                 return true;
         }
         else
         {
-            if(i == 0)
-                j++;
+            if(j == 0)
+                i++;
             else
-                i = failure[i];
+                j = failure[j];
         }
     }
     return false;
