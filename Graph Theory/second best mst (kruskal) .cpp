@@ -1,5 +1,3 @@
-//kruskal
-//O(ElogE)
 #include <bits/stdc++.h>
 using namespace std;
 
