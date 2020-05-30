@@ -2,6 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//1
 mod(int x, int n, int m)
 {
     int y;
@@ -17,6 +18,22 @@ mod(int x, int n, int m)
     else
         return ( (x%m) * mod(x, n-1, m)) % m;
 }
+
+//2
+int bigMod(int a, int n, int m)
+{
+    if(n == 0)
+        return 1;
+
+    int x = bigMod(a, n/2, m);
+    x = (x * x) %  m;
+
+    if(n % 2 == 1)
+        x = (x * a) % m;
+
+    return x;
+}
+
 
 int main()
 {
