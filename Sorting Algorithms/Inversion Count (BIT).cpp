@@ -104,7 +104,23 @@ int main()
 
     for(int i=0; i<n; i++)
         cin>>ara[i];
-
+     /*  
+    //for linear space complexity
+    vector<pii> v;
+        v.push_back({0,0});
+        for(ll i=1; i<=n; i++){
+            cin>>ara[i];
+ 
+            v.push_back(make_pair(ara[i], i));
+        }
+        sort(v.begin(), v.end());
+ 
+        for(ll i=1; i<=n; i++){
+            ara[i] = v[i].second;
+        }
+    cout<<getInvCount()<<endl;
+    */
+    
     cout<<"Number of Inversions: "<<getInvCount()<<endl;
 
     return 0;
