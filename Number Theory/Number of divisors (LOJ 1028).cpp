@@ -77,7 +77,7 @@ void sieve(ll n)
 
 }
 
-int divisorCount(ll n)
+int NOD(ll n)
 {
     int res = 1;
     int limit = sqrt(n);
