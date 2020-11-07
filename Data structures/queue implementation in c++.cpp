@@ -25,7 +25,7 @@ public:
 
     bool isFull()
     {
-        if(front == -1 && rear == Max-1)
+        if(front == 0 && rear == Max-1)
             return true;
         else
             return false;
